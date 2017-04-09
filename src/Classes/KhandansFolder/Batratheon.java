@@ -3,6 +3,7 @@ package Classes.KhandansFolder;
 import Classes.HousesFolder.Ghale;
 import Classes.HousesFolder.StormAndGhale;
 import Classes.ToolsFolder.KhandanPerson;
+import Classes.ToolsFolder.Tools;
 
 public class Batratheon extends Khandan {
 
@@ -10,6 +11,7 @@ public class Batratheon extends Khandan {
 		super(father, mother, shoar, nemad, ghedmat);
 		// TODO Auto-generated constructor stub
 		setGhale(new StormAndGhale());
+		setMyKhandan(Tools.Khandanha.Batratheon);
 	}
 
 	@Override

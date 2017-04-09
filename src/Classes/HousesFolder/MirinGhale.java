@@ -1,5 +1,5 @@
 package Classes.HousesFolder;
 
-public class MirinGhale {
+public class MirinGhale extends Ghale {
 
 }

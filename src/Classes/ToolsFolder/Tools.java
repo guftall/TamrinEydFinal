@@ -4,7 +4,9 @@ public class Tools {
 
 	public enum Khandanha {
 		Stark,
-		Lenister
+		Lenister,
+		Batratheon,
+		Targrin
 	}
 
 }

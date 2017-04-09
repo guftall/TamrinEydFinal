@@ -20,6 +20,8 @@ public abstract class Khandan {
 	private ArrayList<KhandanPerson> khandanChildren;
 	private ArrayList<Tools.Khandanha> motahedan;
 	
+	private Tools.Khandanha myKhandan;
+	
 	protected Ghale ghale;
 	
 	
@@ -129,6 +131,16 @@ public abstract class Khandan {
 		else {
 			// Solh
 		}
+	}
+
+
+	public Tools.Khandanha getMyKhandan() {
+		return myKhandan;
+	}
+
+
+	public void setMyKhandan(Tools.Khandanha myKhandan) {
+		this.myKhandan = myKhandan;
 	}
 
 }
