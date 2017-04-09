@@ -63,6 +63,31 @@ public abstract class Khandan {
 	public KhandanPerson getKhandanFather() {
 		return khandanFather;
 	}
+
+
+	// اضافه و حذف کردن متحدان
+	public ArrayList<Tools.Khandanha> getMotahedan() {
+		return motahedan;
+	}
+
+	public void addMotahed(Tools.Khandanha motahed) {
+		this.motahedan.add(motahed);
+	}
+	
+	public void removeMotahed(Tools.Khandanha khandan) {
+		this.motahedan.remove(khandan);
+	}
+	
+	// فرستادن نیروی نظامی به خاندان دیگر
+	public void sendSarbaz(int number, Khandan khandan) {
+		
+		// باید سرباز بسازد
+		for(int i=0; i<number; i++)
+			khandan.reveiveSarbaz(number);
+		
+	}
+	
+	public abstract void reveiveSarbaz(int number);
 	
 
 }

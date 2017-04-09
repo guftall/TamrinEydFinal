@@ -24,5 +24,12 @@ public class Batratheon extends Khandan {
 		stormAndGhale.stormAndMethod();
 	}
 
+	@Override
+	public void reveiveSarbaz(int number) {
+		// TODO Auto-generated method stub
+		ghale.getSarbazKhane().addSarbaz(number);
+	}
+
+
 
 }

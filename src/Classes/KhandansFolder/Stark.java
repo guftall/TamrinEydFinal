@@ -18,4 +18,11 @@ public class Stark extends Khandan {
 		
 	}
 
+
+	@Override
+	public void reveiveSarbaz(int number) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
