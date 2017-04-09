@@ -130,6 +130,8 @@ public abstract class Khandan {
 		}
 		else {
 			// Solh
+			motahedan.add(enemy.getMyKhandan());
+			enemy.addMotahed(this.getMyKhandan());
 		}
 	}
 
