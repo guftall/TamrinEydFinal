@@ -1,5 +1,5 @@
 package Classes.KhandansFolder;
 
-public class Lenister {
+public class Lenister extends Khandan {
 
 }

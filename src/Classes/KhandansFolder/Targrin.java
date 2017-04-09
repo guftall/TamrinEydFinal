@@ -1,5 +1,5 @@
 package Classes.KhandansFolder;
 
-public class Targrin {
+public class Targrin extends Khandan {
 
 }

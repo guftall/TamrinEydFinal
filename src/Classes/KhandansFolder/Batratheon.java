@@ -1,5 +1,5 @@
 package Classes.KhandansFolder;
 
-public class Batratheon {
+public class Batratheon extends Khandan {
 
 }
