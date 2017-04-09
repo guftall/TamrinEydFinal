@@ -6,7 +6,7 @@ import Classes.HousesFolder.WinterFellGhale;
 import Classes.ToolsFolder.KhandanPerson;
 import Classes.ToolsFolder.Tools;
 
-public class Khandan {
+public abstract class Khandan {
 	
 	private final KhandanPerson khandanFather;
 	private final KhandanPerson khandanMother;
