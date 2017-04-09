@@ -11,10 +11,6 @@ import Classes.ToolsFolder.Tools;
 
 public class Stark extends Khandan {
 	
-	
-	public ArrayList<Gorg> heyvans = new ArrayList<Gorg>();
-	
-	
 
 	public Stark(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
 		super(father, mother, shoar, nemad, ghedmat);
@@ -30,7 +26,7 @@ public class Stark extends Khandan {
 	@Override
 	public void setGhale(Ghale ghale) {
 		// TODO Auto-generated method stub
-		
+		this.ghale = ghale;
 	}
 
 

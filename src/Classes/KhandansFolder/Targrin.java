@@ -10,8 +10,6 @@ import Classes.ToolsFolder.Tools;
 
 public class Targrin extends Khandan {
 
-	public ArrayList<Heyvan> heyvans = new ArrayList<Heyvan>(3);
-	
 	
 	public Targrin(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
 		super(father, mother, shoar, nemad, ghedmat);
@@ -24,7 +22,7 @@ public class Targrin extends Khandan {
 	@Override
 	public void setGhale(Ghale ghale) {
 		// TODO Auto-generated method stub
-		
+		this.ghale = ghale;
 	}
 
 
