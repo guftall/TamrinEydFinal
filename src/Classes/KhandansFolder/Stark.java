@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import Classes.HousesFolder.Ghale;
 import Classes.HousesFolder.WinterFellGhale;
+import Classes.ToolsFolder.Gorg;
 import Classes.ToolsFolder.Heyvan;
 import Classes.ToolsFolder.KhandanPerson;
 import Classes.ToolsFolder.Tools;
@@ -11,7 +12,7 @@ import Classes.ToolsFolder.Tools;
 public class Stark extends Khandan {
 	
 	
-	public ArrayList<Heyvan> heyvans = new ArrayList<Heyvan>();
+	public ArrayList<Gorg> heyvans = new ArrayList<Gorg>();
 	
 	
 
@@ -20,6 +21,9 @@ public class Stark extends Khandan {
 		// TODO Auto-generated constructor stub
 		setGhale(new WinterFellGhale());
 		setMyKhandan(Tools.Khandanha.Stark);
+		
+		
+		
 	}
 
 

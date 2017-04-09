@@ -4,7 +4,7 @@ public class Gorg extends Heyvan {
 
 
 	public void ghoRRRRResh() {
-		
+		System.out.println("Ghoresh Kardam");
 	}
 	
 	@Override
