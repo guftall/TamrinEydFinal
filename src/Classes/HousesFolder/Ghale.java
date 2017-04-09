@@ -14,6 +14,7 @@ public class Ghale {
 	public final Khandanha khandan;
 	
 	
+	
 	public Ghale(String name, String location, Khandanha khandan) {
 		this.name = name;
 		this.location = location;

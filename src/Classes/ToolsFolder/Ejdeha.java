@@ -10,13 +10,13 @@ public class Ejdeha extends Heyvan {
 	@Override
 	public void move() {
 		// TODO Auto-generated method stub
-		// Parvaz Kardan
+		System.out.println("Parvaz KArdam");
 	}
 
 
 	@Override
 	public void attack() {
 		// TODO Auto-generated method stub
-		// Partabe Atash
+		System.out.println("Voooo Atisho begir biad");
 	}
 }

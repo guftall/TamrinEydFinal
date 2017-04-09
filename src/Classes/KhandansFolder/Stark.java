@@ -1,11 +1,19 @@
 package Classes.KhandansFolder;
 
+import java.util.ArrayList;
+
 import Classes.HousesFolder.Ghale;
 import Classes.HousesFolder.WinterFellGhale;
+import Classes.ToolsFolder.Heyvan;
 import Classes.ToolsFolder.KhandanPerson;
 import Classes.ToolsFolder.Tools;
 
 public class Stark extends Khandan {
+	
+	
+	public ArrayList<Heyvan> heyvans = new ArrayList<Heyvan>();
+	
+	
 
 	public Stark(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
 		super(father, mother, shoar, nemad, ghedmat);

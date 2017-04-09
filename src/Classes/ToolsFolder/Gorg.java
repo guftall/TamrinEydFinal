@@ -10,12 +10,12 @@ public class Gorg extends Heyvan {
 	@Override
 	public void move() {
 		// TODO Auto-generated method stub
-		// Davidan
+		System.out.println("Davidan");
 	}
 
 	@Override
 	public void attack() {
 		// TODO Auto-generated method stub
-		// Gaz gereftan
+		System.out.println("Voooo Gazesh Bigirammmmm");
 	}
 }
