@@ -2,6 +2,7 @@ package Classes.KhandansFolder;
 
 import java.util.ArrayList;
 
+import Classes.HousesFolder.Ghale;
 import Classes.HousesFolder.WinterFellGhale;
 import Classes.ToolsFolder.KhandanPerson;
 import Classes.ToolsFolder.Tools;
@@ -18,8 +19,7 @@ public abstract class Khandan {
 	private ArrayList<KhandanPerson> khandanChildren;
 	private ArrayList<Tools.Khandanha> motahedan;
 	
-	private WinterFellGhale ghale;
-	
+	protected Ghale ghale;
 	
 	
 	public Khandan(KhandanPerson father, KhandanPerson mother,String shoar, String nemad, int ghedmat) {
@@ -33,15 +33,35 @@ public abstract class Khandan {
 	}
 
 
+	public abstract void setGhale(Ghale ghale);
 
-	public WinterFellGhale getGhale() {
-		return ghale;
+
+	public int getGhedmat() {
+		return ghedmat;
 	}
 
 
 
-	public void setGhale(WinterFellGhale ghale) {
-		this.ghale = ghale;
+	public String getNemad() {
+		return nemad;
+	}
+
+
+
+	public String getShoar() {
+		return shoar;
+	}
+
+
+
+	public KhandanPerson getKhandanMother() {
+		return khandanMother;
+	}
+
+
+
+	public KhandanPerson getKhandanFather() {
+		return khandanFather;
 	}
 	
 
