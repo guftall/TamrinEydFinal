@@ -1,6 +1,7 @@
 package Classes.KhandansFolder;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import Classes.HousesFolder.Ghale;
 import Classes.HousesFolder.WinterFellGhale;
@@ -112,6 +113,11 @@ public abstract class Khandan {
 	}
 	
 	public void receiveWar(Khandan enemy) {
+		
+		// اضافه کردن تعداد تصادفی سرباز به قلعه خودم برای دفاع
+		Random random = new Random();
+		ghale.getSarbazKhane().addSarbaz(random.nextInt(1500));
+		
 		int mySN = ghale.getSarbazKhane().getSarbazHaNumber();
 		int enSN = enemy.ghale.getSarbazKhane().getSarbazHaNumber();
 		if(mySN > enSN) {
