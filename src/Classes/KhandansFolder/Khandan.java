@@ -127,6 +127,10 @@ public abstract class Khandan {
 		}
 		else if(mySN < enSN) {
 			// shekaste Man
+			
+			// خالی کردن انبار من
+			enemy.ghale.getAnbar().addKala(this.ghale.getAnbar().getTedadeKala());
+			this.ghale.getAnbar().removeAllKala();
 		}
 		else {
 			// Solh
