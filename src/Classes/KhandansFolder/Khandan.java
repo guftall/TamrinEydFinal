@@ -86,8 +86,43 @@ public abstract class Khandan {
 			khandan.reveiveSarbaz(number);
 		
 	}
-	
 	public abstract void reveiveSarbaz(int number);
 	
+	// فرستادن کالا
+	public void sendKala(int number, Khandan khandan) {
+		int kda = ghale.getAnbar().getTedadeKala();
+		if(kda >= number) {
+			// can send Kala
+			ghale.getAnbar().removeKala(number);
+			khandan.receiveKala(number);
+		}
+		else if(kda < number) {
+			// can not send kala
+		}
+	}
+	
+	public void receiveKala(int number) {
+		ghale.getAnbar().addKala(number);
+	}
+
+	
+	// جنگ
+	public void startWarWith(Khandan khandan) {
+		khandan.receiveWar(this); // ارسال خاندان من برای وار با خاندا دریافت شده در پارامتر
+	}
+	
+	public void receiveWar(Khandan enemy) {
+		int mySN = ghale.getSarbazKhane().getSarbazHaNumber();
+		int enSN = enemy.ghale.getSarbazKhane().getSarbazHaNumber();
+		if(mySN > enSN) {
+			// Borde Man
+		}
+		else if(mySN < enSN) {
+			// shekaste Man
+		}
+		else {
+			// Solh
+		}
+	}
 
 }
