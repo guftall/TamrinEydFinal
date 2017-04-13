@@ -9,8 +9,14 @@ public class MirinGhale extends Ghale {
 	
 	public ArrayList<Ejdeha> ejdehas = new ArrayList<Ejdeha>(3);
 	
+	
+	
 	public MirinGhale() {
 		super("Herame Bozorge Mirin", "Esus", Khandanha.Targrin);
+
+		ejdehas.add(new Ejdeha());
+		ejdehas.add(new Ejdeha());
+		ejdehas.add(new Ejdeha());
 	}
 
 }
