@@ -19,14 +19,12 @@ public class Ghale {
 		this.name = name;
 		this.location = location;
 		this.khandan = khandan;
+		
+		sarbazKhane = new SarbazKhane();
 	}
 
 	public SarbazKhane getSarbazKhane() {
 		return sarbazKhane;
-	}
-
-	public void setSarbazKhane(SarbazKhane sarbazKhane) {
-		this.sarbazKhane = sarbazKhane;
 	}
 
 	public Anbar getAnbar() {

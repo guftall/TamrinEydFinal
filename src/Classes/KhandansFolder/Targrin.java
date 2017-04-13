@@ -16,7 +16,6 @@ public class Targrin extends Khandan {
 								"Khun va Atash", "Ejdehaye Se SAare Ghermez", 500);
 
 		setGhale(new MirinGhale());
-		setMyKhandan(Tools.Khandanha.Targrin);
 	}
 	
 	private Targrin(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {

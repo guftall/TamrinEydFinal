@@ -18,9 +18,7 @@ public abstract class Khandan {
 	private final int ghedmat;
 	
 	private ArrayList<KhandanPerson> khandanChildren;
-	private ArrayList<Tools.Khandanha> motahedan;
-	
-	private Tools.Khandanha myKhandan;
+	private ArrayList<Tools.Khandanha> motahedan = new ArrayList<Tools.Khandanha>();
 	
 	public Ghale ghale;
 	
@@ -124,29 +122,23 @@ public abstract class Khandan {
 		int enSN = enemy.ghale.getSarbazKhane().getSarbazHaNumber();
 		if(mySN > enSN) {
 			// Borde Man
+			System.out.println(this.ghale.khandan+ " Piruz shod.\n"+ enemy.ghale.khandan + " Shekast Khord");
 		}
 		else if(mySN < enSN) {
 			// shekaste Man
 			
 			// خالی کردن انبار من
 			enemy.ghale.getAnbar().addKala(this.ghale.getAnbar().getTedadeKala());
+			System.out.println(this.ghale.khandan + " Shekast Khord." + this.ghale.getAnbar().getTedadeKala()+ " Kala gharat Shod.\n" + enemy.ghale.khandan + " Piruz Shod.");
 			this.ghale.getAnbar().removeAllKala();
 		}
 		else {
 			// Solh
-			motahedan.add(enemy.getMyKhandan());
-			enemy.addMotahed(this.getMyKhandan());
+			motahedan.add(enemy.ghale.khandan);
+			enemy.addMotahed(this.ghale.khandan);
+			System.out.println("Beyne "+ this.ghale.khandan + " Va "+ enemy.ghale.khandan+ " Solh ijad shod.alan motahed Astand");
 		}
 	}
 
-
-	public Tools.Khandanha getMyKhandan() {
-		return myKhandan;
-	}
-
-
-	public void setMyKhandan(Tools.Khandanha myKhandan) {
-		this.myKhandan = myKhandan;
-	}
 
 }

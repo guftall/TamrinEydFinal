@@ -8,6 +8,7 @@ import Classes.ToolsFolder.Gorg;
 import Classes.ToolsFolder.Heyvan;
 import Classes.ToolsFolder.KhandanPerson;
 import Classes.ToolsFolder.Tools;
+import Classes.ToolsFolder.Tools.Khandanha;
 
 public class Stark extends Khandan {
 	
@@ -18,7 +19,6 @@ public class Stark extends Khandan {
 								"Zemestan dar rah ast", "Gorg", 8000 );
 		// TODO Auto-generated constructor stub
 		setGhale(new WinterFellGhale());
-		setMyKhandan(Tools.Khandanha.Stark);
 		
 		
 		

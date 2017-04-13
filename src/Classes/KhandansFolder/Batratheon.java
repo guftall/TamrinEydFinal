@@ -12,7 +12,6 @@ public class Batratheon extends Khandan {
 							"Khashm Az Ane Mast", "Gavazn", 300);
 
 		setGhale(new StormAndGhale());
-		setMyKhandan(Tools.Khandanha.Batratheon);
 	}
 
 	public Batratheon(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {

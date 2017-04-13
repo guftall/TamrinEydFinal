@@ -13,7 +13,6 @@ public class Lenister extends Khandan {
 								"Ghoresh Mara Beshnow", "Shir", 5000);
 		
 		setGhale(new KesterlyRuckGhale());
-		setMyKhandan(Tools.Khandanha.Lenister);
 	}
 
 	private Lenister(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
@@ -23,7 +22,7 @@ public class Lenister extends Khandan {
 
 	@Override
 	public void setGhale(Ghale ghale) {
-
+			this.ghale = ghale;
 		
 	}
 
