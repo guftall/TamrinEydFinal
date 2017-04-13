@@ -3,6 +3,7 @@ package Classes.HousesFolder;
 import Classes.ToolsFolder.Anbar;
 import Classes.ToolsFolder.SarbazKhane;
 import Classes.ToolsFolder.Tools.Khandanha;
+import Classes.ToolsFolder.Tools.VaziyateGhale;
 
 public class Ghale {
 	
@@ -13,6 +14,8 @@ public class Ghale {
 	public final String location;
 	public final Khandanha khandan;
 	
+	private VaziyateGhale vaziyat;
+	public int tedadeJamiyateKol;
 	
 	
 	public Ghale(String name, String location, Khandanha khandan) {
@@ -22,6 +25,14 @@ public class Ghale {
 		
 		sarbazKhane = new SarbazKhane();
 		anbar = new Anbar();
+		setVaziyat(VaziyateGhale.Azad);
+	}
+
+	public void increaseJamiyat(int number) {
+		tedadeJamiyateKol += number;
+	}
+	public void decreaseJamiyat(int number) {
+		tedadeJamiyateKol -= number;
 	}
 
 	public SarbazKhane getSarbazKhane() {
@@ -30,6 +41,14 @@ public class Ghale {
 
 	public Anbar getAnbar() {
 		return anbar;
+	}
+
+	public VaziyateGhale getVaziyat() {
+		return vaziyat;
+	}
+
+	public void setVaziyat(VaziyateGhale vaziyat) {
+		this.vaziyat = vaziyat;
 	}
 
 }

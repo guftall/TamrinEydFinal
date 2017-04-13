@@ -16,6 +16,7 @@ public class Targrin extends Khandan {
 								"Khun va Atash", "Ejdehaye Se SAare Ghermez", 500);
 
 		setGhale(new MirinGhale());
+		ghale.increaseJamiyat(6 + ghale.getSarbazKhane().getSarbazHaNumber());
 	}
 	
 	private Targrin(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {

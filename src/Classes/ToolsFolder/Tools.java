@@ -24,5 +24,11 @@ public class Tools {
 		Sang,
 		Chub
 	}
+	
+	public enum VaziyateGhale{
+		Azad,
+		TasarofShode,
+		DarHaleJang
+	}
 
 }

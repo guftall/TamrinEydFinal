@@ -12,6 +12,7 @@ public class Batratheon extends Khandan {
 							"Khashm Az Ane Mast", "Gavazn", 300);
 
 		setGhale(new StormAndGhale());
+		ghale.increaseJamiyat(5 + ghale.getSarbazKhane().getSarbazHaNumber());
 	}
 
 	public Batratheon(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {

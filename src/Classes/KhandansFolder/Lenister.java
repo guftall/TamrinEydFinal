@@ -13,6 +13,7 @@ public class Lenister extends Khandan {
 								"Ghoresh Mara Beshnow", "Shir", 5000);
 		
 		setGhale(new KesterlyRuckGhale());
+		ghale.increaseJamiyat(5 + ghale.getSarbazKhane().getSarbazHaNumber());
 	}
 
 	private Lenister(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {

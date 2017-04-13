@@ -20,9 +20,11 @@ public class Stark extends Khandan {
 								"Zemestan dar rah ast", "Gorg", 8000 );
 		// TODO Auto-generated constructor stub
 		setGhale(new WinterFellGhale());
-		
-		
-		
+		ghale.increaseJamiyat(9 + ghale.getSarbazKhane().getSarbazHaNumber());
+	}
+	
+	public WinterFellGhale getGhale() {
+		return (WinterFellGhale) ghale;
 	}
 	
 	private Stark(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
@@ -50,8 +52,6 @@ public class Stark extends Khandan {
 	
 	/*		Explain 	*/
 	public void createGorg() {
-		WinterFellGhale wGhale = (WinterFellGhale) ghale;
-
 		Gorg gorg = null;
 		Random random = new Random();
 		switch (random.nextInt(9)) {
@@ -83,7 +83,7 @@ public class Stark extends Khandan {
 			gorg = new Gorg(khandanChildren.get(5));
 			break;
 		}
-		wGhale.createGorg(gorg);
+		getGhale().createGorg(gorg);
 		
 	}
 	

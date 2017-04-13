@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 import Classes.KhandansFolder.Khandan;
 import Classes.KhandansFolder.Stark;
+import Classes.ToolsFolder.Asb;
 import Classes.ToolsFolder.Gorg;
+import Classes.ToolsFolder.Sag;
 import Classes.ToolsFolder.Tools.Khandanha;
 
 public class WinterFellGhale extends Ghale {
@@ -12,12 +14,15 @@ public class WinterFellGhale extends Ghale {
 
 	
 	private ArrayList<Gorg> gorgs = new ArrayList<Gorg>();
+	public ArrayList<Sag> sags = new ArrayList<Sag>();
+	public ArrayList<Asb> asbs = new ArrayList<Asb>();
 	
 	
 	public void createGorg(Gorg gorg) {
 		gorgs.add(gorg);
 	}
 	
+	/* 		Explain		*/
 	public void repairGorg() {
 		for(int i=0; i<gorgs.size(); i++)
 		{
@@ -34,5 +39,6 @@ public class WinterFellGhale extends Ghale {
 	public WinterFellGhale() {
 		super("Winter Fell", "Shomale Vestrus", Khandanha.Stark);
 	}
+	
 
 }

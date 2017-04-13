@@ -22,7 +22,7 @@ public abstract class Khandan {
 	protected ArrayList<KhandanPerson> khandanChildren;
 	private ArrayList<Tools.Khandanha> motahedan = new ArrayList<Tools.Khandanha>();
 	
-	public Ghale ghale;
+	protected Ghale ghale;
 	
 	
 	public Khandan(KhandanPerson father, KhandanPerson mother,String shoar, String nemad, int ghedmat) {
@@ -37,7 +37,7 @@ public abstract class Khandan {
 
 
 	protected abstract void setGhale(Ghale ghale);
-
+	
 
 	public int getGhedmat() {
 		return ghedmat;
