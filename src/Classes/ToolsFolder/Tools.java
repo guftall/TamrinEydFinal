@@ -8,5 +8,12 @@ public class Tools {
 		Batratheon,
 		Targrin
 	}
+	
+	public enum Vazife{
+		Negahbani,
+		NeyzeDar,
+		AsbSavar,
+		Kamandar
+	}
 
 }
