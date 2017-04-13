@@ -1,8 +1,17 @@
 package Classes.ToolsFolder;
 
+import java.util.Random;
+
 public class Anbar {
 
 	private int tedadeKala;
+	
+	public Anbar() {
+		
+		Random random = new Random();
+		
+		setTedadeKala(random.nextInt(2300));
+	}
 
 	public int getTedadeKala() {
 		return tedadeKala;

@@ -21,6 +21,7 @@ public class Ghale {
 		this.khandan = khandan;
 		
 		sarbazKhane = new SarbazKhane();
+		anbar = new Anbar();
 	}
 
 	public SarbazKhane getSarbazKhane() {
@@ -29,10 +30,6 @@ public class Ghale {
 
 	public Anbar getAnbar() {
 		return anbar;
-	}
-
-	public void setAnbar(Anbar anbar) {
-		this.anbar = anbar;
 	}
 
 }
