@@ -22,7 +22,7 @@ public abstract class Khandan {
 	
 	private Tools.Khandanha myKhandan;
 	
-	protected Ghale ghale;
+	public Ghale ghale;
 	
 	
 	public Khandan(KhandanPerson father, KhandanPerson mother,String shoar, String nemad, int ghedmat) {
