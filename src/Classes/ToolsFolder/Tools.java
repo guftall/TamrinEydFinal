@@ -15,5 +15,14 @@ public class Tools {
 		AsbSavar,
 		Kamandar
 	}
+	
+	public enum NoeKala{
+		Gandom,
+		Nan,
+		Shamshir,
+		Neyze,
+		Sang,
+		Chub
+	}
 
 }
