@@ -114,32 +114,40 @@ public abstract class Khandan {
 	
 	public void receiveWar(Khandan enemy) {
 		
+		String modafe = this.ghale.khandan.toString();
+		String motajavez = enemy.ghale.khandan.toString();
+		
 		System.out.println("War Details:");
+		
 		// اضافه کردن تعداد تصادفی سرباز به قلعه خودم برای دفاع
 		Random random = new Random();
 		ghale.getSarbazKhane().addSarbaz(random.nextInt(1500));
-		System.out.println(this.ghale.khandan+ " Have "+ this.ghale.getSarbazKhane().getSarbazHaNumber()+ " Sarbaz.");
-		System.out.println(enemy.ghale.khandan+ " Have "+ enemy.ghale.getSarbazKhane().getSarbazHaNumber()+ " Sarbaz.\n");
+		
+		System.out.println(modafe+ " Have "+ this.ghale.getSarbazKhane().getSarbazHaNumber()+ " Sarbaz.");
+		System.out.println(motajavez+ " Have "+ enemy.ghale.getSarbazKhane().getSarbazHaNumber()+ " Sarbaz.\n");
+		
 		
 		int mySN = ghale.getSarbazKhane().getSarbazHaNumber();
 		int enSN = enemy.ghale.getSarbazKhane().getSarbazHaNumber();
 		if(mySN > enSN) {
 			// Borde Man
-			System.out.println(this.ghale.khandan+ " Piruz shod.\n"+ enemy.ghale.khandan + " Shekast Khord");
+			System.out.println(modafe+ "(modafe) Piruz shod.");
+			System.out.println(motajavez + "(motajavez) Shekast Khord");
 		}
 		else if(mySN < enSN) {
 			// shekaste Man
 			
 			// خالی کردن انبار من
 			enemy.ghale.getAnbar().addKala(this.ghale.getAnbar().getTedadeKala());
-			System.out.println(this.ghale.khandan + " Shekast Khord." + this.ghale.getAnbar().getTedadeKala()+ " Kala gharat Shod.\n" + enemy.ghale.khandan + " Piruz Shod.");
+			System.out.println(modafe + "(modafe) Shekast Khord." + this.ghale.getAnbar().getTedadeKala()+ " Kala gharat Shod.");
+			System.out.println(motajavez + "(motajavez) Piruz Shod.");
 			this.ghale.getAnbar().removeAllKala();
 		}
 		else {
 			// Solh
 			motahedan.add(enemy.ghale.khandan);
 			enemy.addMotahed(this.ghale.khandan);
-			System.out.println("Beyne "+ this.ghale.khandan + " Va "+ enemy.ghale.khandan+ " Solh ijad shod.alan motahed Astand");
+			System.out.println("Beyne "+ modafe + " Va "+ motajavez+ "(motajavez) Solh ijad shod.alan motahed Astand");
 		}
 	}
 
