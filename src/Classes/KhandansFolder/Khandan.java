@@ -114,9 +114,12 @@ public abstract class Khandan {
 	
 	public void receiveWar(Khandan enemy) {
 		
+		System.out.println("War Details:");
 		// اضافه کردن تعداد تصادفی سرباز به قلعه خودم برای دفاع
 		Random random = new Random();
 		ghale.getSarbazKhane().addSarbaz(random.nextInt(1500));
+		System.out.println(this.ghale.khandan+ " Have "+ this.ghale.getSarbazKhane().getSarbazHaNumber()+ " Sarbaz.");
+		System.out.println(enemy.ghale.khandan+ " Have "+ enemy.ghale.getSarbazKhane().getSarbazHaNumber()+ " Sarbaz.\n");
 		
 		int mySN = ghale.getSarbazKhane().getSarbazHaNumber();
 		int enSN = enemy.ghale.getSarbazKhane().getSarbazHaNumber();
