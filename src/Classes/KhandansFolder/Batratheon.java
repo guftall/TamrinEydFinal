@@ -6,12 +6,18 @@ import Classes.ToolsFolder.KhandanPerson;
 import Classes.ToolsFolder.Tools;
 
 public class Batratheon extends Khandan {
+	
+	public Batratheon() {
+		this(new KhandanPerson("Robert", "Baratheon"), new KhandanPerson("Sersi", "Lenister"),
+							"Khashm Az Ane Mast", "Gavazn", 300);
+
+		setGhale(new StormAndGhale());
+		setMyKhandan(Tools.Khandanha.Batratheon);
+	}
 
 	public Batratheon(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
 		super(father, mother, shoar, nemad, ghedmat);
-		// TODO Auto-generated constructor stub
-		setGhale(new StormAndGhale());
-		setMyKhandan(Tools.Khandanha.Batratheon);
+
 	}
 
 	@Override

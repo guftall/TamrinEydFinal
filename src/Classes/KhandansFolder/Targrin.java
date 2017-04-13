@@ -11,11 +11,17 @@ import Classes.ToolsFolder.Tools;
 public class Targrin extends Khandan {
 
 	
-	public Targrin(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
-		super(father, mother, shoar, nemad, ghedmat);
-		// TODO Auto-generated constructor stub
+	public Targrin() {
+		this(new KhandanPerson("Aeris", "Targrin"), new KhandanPerson("Raela", "Targrin"),
+								"Khun va Atash", "Ejdehaye Se SAare Ghermez", 500);
+
 		setGhale(new MirinGhale());
 		setMyKhandan(Tools.Khandanha.Targrin);
+	}
+	
+	private Targrin(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
+		super(father, mother, shoar, nemad, ghedmat);
+		// TODO Auto-generated constructor stub
 	}
 
 

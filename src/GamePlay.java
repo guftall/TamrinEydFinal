@@ -10,7 +10,7 @@ public class GamePlay {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Stark stark = new Stark(new KhandanPerson("", ""), new KhandanPerson("", ""), "", "", 100);
+		Stark stark = new Stark();
 		
 	}
 

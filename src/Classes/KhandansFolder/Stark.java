@@ -11,9 +11,11 @@ import Classes.ToolsFolder.Tools;
 
 public class Stark extends Khandan {
 	
+	private final KhandanPerson amuyeKhandan;
 
-	public Stark(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
-		super(father, mother, shoar, nemad, ghedmat);
+	public Stark() {
+		this(new KhandanPerson("Lord Edard", "Stark"), new KhandanPerson("Banu katlin", "Tali"),
+								"Zemestan dar rah ast", "Gorg", 8000 );
 		// TODO Auto-generated constructor stub
 		setGhale(new WinterFellGhale());
 		setMyKhandan(Tools.Khandanha.Stark);
@@ -21,7 +23,16 @@ public class Stark extends Khandan {
 		
 		
 	}
+	
+	private Stark(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
+		super(father, mother, shoar, nemad, ghedmat);
+		amuyeKhandan = new KhandanPerson("Benjen", "Stark");
+	}
 
+
+	public KhandanPerson getAmuyeKhandan() {
+		return amuyeKhandan;
+	}
 
 	@Override
 	public void setGhale(Ghale ghale) {
