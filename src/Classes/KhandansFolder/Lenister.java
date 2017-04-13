@@ -21,7 +21,7 @@ public class Lenister extends Khandan {
 	}
 
 	@Override
-	public void setGhale(Ghale ghale) {
+	protected void setGhale(Ghale ghale) {
 			this.ghale = ghale;
 		
 	}

@@ -1,6 +1,7 @@
 package Classes.KhandansFolder;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import Classes.HousesFolder.Ghale;
 import Classes.HousesFolder.WinterFellGhale;
@@ -35,7 +36,7 @@ public class Stark extends Khandan {
 	}
 
 	@Override
-	public void setGhale(Ghale ghale) {
+	protected void setGhale(Ghale ghale) {
 		// TODO Auto-generated method stub
 		this.ghale = ghale;
 	}
@@ -46,5 +47,45 @@ public class Stark extends Khandan {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	/*		Explain 	*/
+	public void createGorg() {
+		WinterFellGhale wGhale = (WinterFellGhale) ghale;
+
+		Gorg gorg = null;
+		Random random = new Random();
+		switch (random.nextInt(9)) {
+		case 0:
+			gorg = new Gorg(getKhandanFather());
+			break;
+		case 1:
+			gorg = new Gorg(getKhandanMother());
+			break;
+		case 2:
+			gorg = new Gorg(getAmuyeKhandan());
+			break;
+		case 3:
+			gorg = new  Gorg(khandanChildren.get(0));
+			break;
+		case 4:
+			gorg = new Gorg(khandanChildren.get(2));
+			break;
+		case 5:
+			gorg = new Gorg(khandanChildren.get(1));
+			break;
+		case 6:
+			gorg = new Gorg(khandanChildren.get(4));
+			break;
+		case 7:
+			gorg = new Gorg(khandanChildren.get(3));
+			break;
+		case 8:
+			gorg = new Gorg(khandanChildren.get(5));
+			break;
+		}
+		wGhale.createGorg(gorg);
+		
+	}
+	
 
 }

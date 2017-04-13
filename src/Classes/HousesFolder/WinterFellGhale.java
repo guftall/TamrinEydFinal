@@ -2,6 +2,8 @@ package Classes.HousesFolder;
 
 import java.util.ArrayList;
 
+import Classes.KhandansFolder.Khandan;
+import Classes.KhandansFolder.Stark;
 import Classes.ToolsFolder.Gorg;
 import Classes.ToolsFolder.Tools.Khandanha;
 
@@ -9,7 +11,7 @@ public class WinterFellGhale extends Ghale {
 	
 
 	
-	public ArrayList<Gorg> gorgs = new ArrayList<Gorg>();
+	private ArrayList<Gorg> gorgs = new ArrayList<Gorg>();
 	
 	
 	public void createGorg(Gorg gorg) {

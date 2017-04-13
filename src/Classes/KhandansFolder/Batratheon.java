@@ -20,7 +20,7 @@ public class Batratheon extends Khandan {
 	}
 
 	@Override
-	public void setGhale(Ghale ghale) {
+	protected void setGhale(Ghale ghale) {
 		// TODO Auto-generated method stub
 		this.ghale = ghale;
 	}
