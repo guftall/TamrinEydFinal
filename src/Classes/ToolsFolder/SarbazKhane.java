@@ -33,8 +33,21 @@ public class SarbazKhane {
 		addSarbaz(random.nextInt(7000));
 	}
 	
+	public Soldier getSarbaz(int index) {
+		return sarbazHa.get(index);
+	}
+	
 	public int getSarbazHaNumber() {
 		return sarbazHa.size();
+	}
+	
+	public int getSarbazHayeValriyaiDarNumber() {
+		int res = 0;
+		for(int i=0; i<sarbazHa.size(); i++) {
+			if(sarbazHa.get(i).haveShamshirValriyai)
+				++res;
+		}
+		return res;
 	}
 	
 	public void removeSarbaz() {

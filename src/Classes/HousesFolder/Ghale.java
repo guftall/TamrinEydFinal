@@ -68,5 +68,18 @@ public class Ghale {
 		while(asbs.size() > bAsb)
 			asbs.remove(0);
 	}
+	
+	public void addShamshirValriyai(int number) {
+		if(number <= sarbazKhane.getSarbazHaNumber())
+		{
+			for(int i=0; i<number; i++) {
+				sarbazKhane.getSarbaz(i).haveShamshirValriyai = true;
+			}
+		}
+		else {
+			for(int i=0; i<sarbazKhane.getSarbazHaNumber(); i++)
+				sarbazKhane.getSarbaz(i).haveShamshirValriyai = true;
+		}
+	}
 
 }
