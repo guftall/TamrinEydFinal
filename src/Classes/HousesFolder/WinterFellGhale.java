@@ -40,5 +40,9 @@ public class WinterFellGhale extends Ghale {
 		super("Winter Fell", "Shomale Vestrus", Khandanha.Stark);
 	}
 	
+	public ArrayList<Gorg> getGorgs(){
+		return gorgs;
+	}
+	
 
 }

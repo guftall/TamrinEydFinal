@@ -6,11 +6,12 @@ public class Gorg extends Heyvan {
 	private KhandanPerson manMaleKiAm;
 	
 	public Gorg() {
-		
+		this(null);
 	}
 	
 	public Gorg(KhandanPerson manMaleKiAm) {
 		this.manMaleKiAm = manMaleKiAm;
+		ghodrat = 50;
 	}
 
 	public void ghoRRRRResh() {

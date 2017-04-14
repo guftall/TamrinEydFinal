@@ -7,7 +7,7 @@ import Classes.ToolsFolder.Tools.Khandanha;
 
 public class MirinGhale extends Ghale {
 	
-	public ArrayList<Ejdeha> ejdehas = new ArrayList<Ejdeha>(3);
+	private ArrayList<Ejdeha> ejdehas = new ArrayList<Ejdeha>(3);
 	
 	
 	
@@ -17,6 +17,10 @@ public class MirinGhale extends Ghale {
 		ejdehas.add(new Ejdeha());
 		ejdehas.add(new Ejdeha());
 		ejdehas.add(new Ejdeha());
+	}
+	
+	public ArrayList<Ejdeha> getEjdehas(){
+		return ejdehas;
 	}
 
 }

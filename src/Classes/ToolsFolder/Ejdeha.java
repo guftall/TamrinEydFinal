@@ -1,9 +1,13 @@
 package Classes.ToolsFolder;
 
 public class Ejdeha extends Heyvan {
+	
+	public Ejdeha() {
+		ghodrat = 350;
+	}
 
 	public void tokhmGozari() {
-		
+		System.out.println("Tokhm Gozashtam, Unam 2 taAA");
 	}
 	
 
