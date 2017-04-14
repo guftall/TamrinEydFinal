@@ -17,6 +17,10 @@ public class Tools {
 		for(Ejdeha ejdeha : ejdehas) {
 			eGhodrat += ejdeha.ghodrat;
 		}
+		if(gorgs.size() == 0) {
+			System.out.println("Can not continue war, gorgs.Size() returned 0!");
+			return;
+		}
 		
 
 		System.out.println(gorgs.size()+ " Gorgs with total Power "+ gGhodrat);

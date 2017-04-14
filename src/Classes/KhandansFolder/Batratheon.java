@@ -8,7 +8,8 @@ import Classes.ToolsFolder.Tools;
 public class Batratheon extends Khandan {
 	
 	public Batratheon() {
-		this(new KhandanPerson("Robert", "Baratheon"), new KhandanPerson("Sersi", "Lenister"),
+		this(new KhandanPerson("Robert", "Baratheon", null),
+			new KhandanPerson("Sersi", "Lenister",new KhandanPerson("Lord TauYen", "Lenister", null)),
 							"Khashm Az Ane Mast", "Gavazn", 300);
 
 		setGhale(new StormAndGhale());
@@ -45,9 +46,9 @@ public class Batratheon extends Khandan {
 	@Override
 	protected void setChildrens() {
 		// TODO Auto-generated method stub
-		khandanChildren.add(new KhandanPerson("Jefri", "Baratheon"));
-		khandanChildren.add(new KhandanPerson("Mirsela", "Baratheon"));
-		khandanChildren.add(new KhandanPerson("Tomen", "Baratheon"));
+		khandanChildren.add(new KhandanPerson("Jefri", "Baratheon", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Mirsela", "Baratheon", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Tomen", "Baratheon", getKhandanFather()));
 	}
 
 

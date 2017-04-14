@@ -9,7 +9,7 @@ import Classes.ToolsFolder.Tools;
 public class Lenister extends Khandan {
 	
 	public Lenister() {
-		this(new KhandanPerson("Lord TauYen", "Lenister"), new KhandanPerson("Juana", "Lenister"),
+		this(new KhandanPerson("Lord TauYen", "Lenister", null), new KhandanPerson("Juana", "Lenister", null),
 								"Ghoresh Mara Beshnow", "Shir", 5000);
 		
 		setGhale(new KesterlyRuckGhale());
@@ -40,9 +40,9 @@ public class Lenister extends Khandan {
 	@Override
 	protected void setChildrens() {
 		// TODO Auto-generated method stub
-		khandanChildren.add(new KhandanPerson("Sersi", "Lenister"));
-		khandanChildren.add(new KhandanPerson("TauYen", "Lenister"));
-		khandanChildren.add(new KhandanPerson("Jimy", "Lenister"));
+		khandanChildren.add(new KhandanPerson("Sersi", "Lenister", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("TauYen", "Lenister", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Jimy", "Lenister", getKhandanFather()));
 	}
 
 }

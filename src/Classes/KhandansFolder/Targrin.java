@@ -12,7 +12,7 @@ public class Targrin extends Khandan {
 
 	
 	public Targrin() {
-		this(new KhandanPerson("Aeris", "Targrin"), new KhandanPerson("Raela", "Targrin"),
+		this(new KhandanPerson("Aeris", "Targrin", null), new KhandanPerson("Raela", "Targrin", null),
 								"Khun va Atash", "Ejdehaye Se SAare Ghermez", 500);
 
 		setGhale(new MirinGhale());
@@ -45,10 +45,10 @@ public class Targrin extends Khandan {
 	@Override
 	protected void setChildrens() {
 		// TODO Auto-generated method stub
-		khandanChildren.add(new KhandanPerson("Rigar", "Targrin"));
-		khandanChildren.add(new KhandanPerson("Eliya", "Targrin"));
-		khandanChildren.add(new KhandanPerson("Visris", "Targrin"));
-		khandanChildren.add(new KhandanPerson("Denris", "Targrin"));
+		khandanChildren.add(new KhandanPerson("Rigar", "Targrin", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Eliya", "Targrin", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Visris", "Targrin", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Denris", "Targrin", getKhandanFather()));
 	}
 
 }

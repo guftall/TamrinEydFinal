@@ -16,7 +16,7 @@ public class Stark extends Khandan {
 	private final KhandanPerson amuyeKhandan;
 
 	public Stark() {
-		this(new KhandanPerson("Lord Edard", "Stark"), new KhandanPerson("Banu katlin", "Tali"),
+		this(new KhandanPerson("Lord Edard", "Stark", null), new KhandanPerson("Banu katlin", "Tali", null),
 								"Zemestan dar rah ast", "Gorg", 8000 );
 		// TODO Auto-generated constructor stub
 		setGhale(new WinterFellGhale());
@@ -26,17 +26,17 @@ public class Stark extends Khandan {
 
 	private Stark(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
 		super(father, mother, shoar, nemad, ghedmat);
-		amuyeKhandan = new KhandanPerson("Benjen", "Stark");
+		amuyeKhandan = new KhandanPerson("Benjen", "Stark", null);
 	}
 	
 	@Override
 	protected void setChildrens() {
-		khandanChildren.add(new KhandanPerson("John Snow", "Stark"));
-		khandanChildren.add(new KhandanPerson("Rub", "Stark"));
-		khandanChildren.add(new KhandanPerson("Aria", "Stark"));
-		khandanChildren.add(new KhandanPerson("Sansa", "Stark"));
-		khandanChildren.add(new KhandanPerson("Riken", "Stark"));
-		khandanChildren.add(new KhandanPerson("Bern", "Stark"));
+		khandanChildren.add(new KhandanPerson("John Snow", "Stark", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Rub", "Stark", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Aria", "Stark", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Sansa", "Stark", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Riken", "Stark", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Bern", "Stark", getKhandanFather()));
 	}
 	
 	public WinterFellGhale getGhale() {
