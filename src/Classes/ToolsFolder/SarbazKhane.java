@@ -33,6 +33,10 @@ public class SarbazKhane {
 		addSarbaz(random.nextInt(7000));
 	}
 	
+	public Soldier getSarbaz(int index) {
+		return sarbazHa.get(index);
+	}
+	
 	public int getSarbazHaNumber() {
 		return sarbazHa.size();
 	}

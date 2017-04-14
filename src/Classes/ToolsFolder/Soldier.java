@@ -5,6 +5,7 @@ import Classes.ToolsFolder.Tools.Vazife;
 public class Soldier extends Person {
 	
 	private Vazife vazife;
+	public boolean haveShamshirValriyai = false;
 
 	public Vazife getVazife() {
 		return vazife;

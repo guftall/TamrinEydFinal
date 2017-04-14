@@ -166,6 +166,16 @@ public abstract class Khandan {
 			System.out.println("Beyne "+ modafe + " Va "+ motajavez+ "(motajavez) Solh ijad shod.alan motahed Astand");
 		}
 	}
+	
+	public Ghale getGhale() {
+		return ghale;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return ghale.khandan.toString();
+	}
 
 
 }
