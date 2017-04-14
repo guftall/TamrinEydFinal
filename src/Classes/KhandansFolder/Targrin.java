@@ -24,6 +24,10 @@ public class Targrin extends Khandan {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	public MirinGhale getGhale() {
+		return (MirinGhale) ghale;
+	}
 
 	@Override
 	protected void setGhale(Ghale ghale) {
@@ -36,6 +40,15 @@ public class Targrin extends Khandan {
 	public void reveiveSarbaz(int number) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	protected void setChildrens() {
+		// TODO Auto-generated method stub
+		khandanChildren.add(new KhandanPerson("Rigar", "Targrin"));
+		khandanChildren.add(new KhandanPerson("Eliya", "Targrin"));
+		khandanChildren.add(new KhandanPerson("Visris", "Targrin"));
+		khandanChildren.add(new KhandanPerson("Denris", "Targrin"));
 	}
 
 }

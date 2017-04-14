@@ -20,17 +20,29 @@ public class Stark extends Khandan {
 								"Zemestan dar rah ast", "Gorg", 8000 );
 		// TODO Auto-generated constructor stub
 		setGhale(new WinterFellGhale());
+		setChildrens();
 		ghale.increaseJamiyat(9 + ghale.getSarbazKhane().getSarbazHaNumber());
+	}
+
+	private Stark(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
+		super(father, mother, shoar, nemad, ghedmat);
+		amuyeKhandan = new KhandanPerson("Benjen", "Stark");
+	}
+	
+	@Override
+	protected void setChildrens() {
+		khandanChildren.add(new KhandanPerson("John Snow", "Stark"));
+		khandanChildren.add(new KhandanPerson("Rub", "Stark"));
+		khandanChildren.add(new KhandanPerson("Aria", "Stark"));
+		khandanChildren.add(new KhandanPerson("Sansa", "Stark"));
+		khandanChildren.add(new KhandanPerson("Riken", "Stark"));
+		khandanChildren.add(new KhandanPerson("Bern", "Stark"));
 	}
 	
 	public WinterFellGhale getGhale() {
 		return (WinterFellGhale) ghale;
 	}
 	
-	private Stark(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
-		super(father, mother, shoar, nemad, ghedmat);
-		amuyeKhandan = new KhandanPerson("Benjen", "Stark");
-	}
 
 
 	public KhandanPerson getAmuyeKhandan() {
@@ -53,7 +65,9 @@ public class Stark extends Khandan {
 	/*		Explain 	*/
 	public void createGorg() {
 		Gorg gorg = null;
+		
 		Random random = new Random();
+		
 		switch (random.nextInt(9)) {
 		case 0:
 			gorg = new Gorg(getKhandanFather());
@@ -86,6 +100,7 @@ public class Stark extends Khandan {
 		getGhale().createGorg(gorg);
 		
 	}
+
 	
 
 }

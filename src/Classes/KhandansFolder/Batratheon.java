@@ -19,6 +19,10 @@ public class Batratheon extends Khandan {
 		super(father, mother, shoar, nemad, ghedmat);
 
 	}
+	
+	public StormAndGhale getGhale() {
+		return (StormAndGhale) ghale;
+	}
 
 	@Override
 	protected void setGhale(Ghale ghale) {
@@ -36,6 +40,14 @@ public class Batratheon extends Khandan {
 	public void reveiveSarbaz(int number) {
 		// TODO Auto-generated method stub
 		ghale.getSarbazKhane().addSarbaz(number);
+	}
+
+	@Override
+	protected void setChildrens() {
+		// TODO Auto-generated method stub
+		khandanChildren.add(new KhandanPerson("Jefri", "Baratheon"));
+		khandanChildren.add(new KhandanPerson("Mirsela", "Baratheon"));
+		khandanChildren.add(new KhandanPerson("Tomen", "Baratheon"));
 	}
 
 

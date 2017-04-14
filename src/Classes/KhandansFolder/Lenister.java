@@ -20,6 +20,10 @@ public class Lenister extends Khandan {
 		super(father, mother, shoar, nemad, ghedmat);
 
 	}
+	
+	public KesterlyRuckGhale getGhale() {
+		return (KesterlyRuckGhale) ghale;
+	}
 
 	@Override
 	protected void setGhale(Ghale ghale) {
@@ -31,6 +35,14 @@ public class Lenister extends Khandan {
 	public void reveiveSarbaz(int number) {
 
 		
+	}
+
+	@Override
+	protected void setChildrens() {
+		// TODO Auto-generated method stub
+		khandanChildren.add(new KhandanPerson("Sersi", "Lenister"));
+		khandanChildren.add(new KhandanPerson("TauYen", "Lenister"));
+		khandanChildren.add(new KhandanPerson("Jimy", "Lenister"));
 	}
 
 }
