@@ -31,11 +31,7 @@ public class Batratheon extends Khandan {
 		this.ghale = ghale;
 	}
 	
-	public void FelanKarKeMethodeshTuyeStormAndHast() {
-		StormAndGhale stormAndGhale = (StormAndGhale) ghale;
-		
-		stormAndGhale.stormAndMethod();
-	}
+	
 
 	@Override
 	public void reveiveSarbaz(int number) {

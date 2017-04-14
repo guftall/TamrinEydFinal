@@ -96,8 +96,9 @@ public abstract class Khandan {
 		int kda = ghale.getAnbar().getTedadeKala(noeKala);
 		if(kda >= number) {
 			// can send Kala
-			ghale.getAnbar().removeKala(number);
+			
 			ArrayList<Kala> res = new ArrayList<Kala>();
+			
 			for(int i=0; i<number; i++) {
 				res.add(ghale.getAnbar().getKala(noeKala));
 			}

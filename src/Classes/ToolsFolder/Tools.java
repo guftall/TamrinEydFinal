@@ -122,7 +122,8 @@ public class Tools {
 		Shamshir,
 		Neyze,
 		Sang,
-		Chub
+		Chub,
+		Tala
 	}
 	
 	public enum VaziyateGhale{

@@ -5,11 +5,12 @@ import java.util.ArrayList;
 import Classes.KhandansFolder.Khandan;
 import Classes.KhandansFolder.Stark;
 import Classes.ToolsFolder.Asb;
+import Classes.ToolsFolder.GhaleSagMethods;
 import Classes.ToolsFolder.Gorg;
 import Classes.ToolsFolder.Sag;
 import Classes.ToolsFolder.Tools.Khandanha;
 
-public class WinterFellGhale extends Ghale {
+public class WinterFellGhale extends Ghale implements GhaleSagMethods {
 	
 
 	
@@ -41,6 +42,19 @@ public class WinterFellGhale extends Ghale {
 	
 	public ArrayList<Gorg> getGorgs(){
 		return gorgs;
+	}
+
+	public void addSag(int number) {
+		// TODO Auto-generated method stub
+		for(int i=0; i<number; i++)
+				sags.add(new Sag());
+	}
+
+	public void removeSag(int number) {
+		// TODO Auto-generated method stub
+		int bSags = sags.size() - number;
+		while(sags.size() > bSags)
+			sags.remove(0);
 	}
 	
 
