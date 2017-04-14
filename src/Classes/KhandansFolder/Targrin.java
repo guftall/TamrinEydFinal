@@ -14,8 +14,12 @@ public class Targrin extends Khandan {
 	public Targrin() {
 		this(new KhandanPerson("Aeris", "Targrin", null), new KhandanPerson("Raela", "Targrin", null),
 								"Khun va Atash", "Ejdehaye Se SAare Ghermez", 500);
-
+		setChildrens();
 		setGhale(new MirinGhale());
+		khandanChildren.get(3).addHeyvan(getGhale().getEjdehas().get(0));
+		khandanChildren.get(3).addHeyvan(getGhale().getEjdehas().get(1));
+		khandanChildren.get(3).addHeyvan(getGhale().getEjdehas().get(2));
+		
 		ghale.increaseJamiyat(6 + ghale.getSarbazKhane().getSarbazHaNumber());
 	}
 	
