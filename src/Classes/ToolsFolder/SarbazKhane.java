@@ -41,6 +41,15 @@ public class SarbazKhane {
 		return sarbazHa.size();
 	}
 	
+	public int getSarbazHayeValriyaiDarNumber() {
+		int res = 0;
+		for(int i=0; i<sarbazHa.size(); i++) {
+			if(sarbazHa.get(i).haveShamshirValriyai)
+				++res;
+		}
+		return res;
+	}
+	
 	public void removeSarbaz() {
 		Random random = new Random();
 		int i;
