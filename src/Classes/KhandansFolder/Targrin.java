@@ -26,6 +26,7 @@ public class Targrin extends Khandan {
 	private Targrin(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
 		super(father, mother, shoar, nemad, ghedmat);
 		// TODO Auto-generated constructor stub
+		
 	}
 
 	
@@ -54,5 +55,15 @@ public class Targrin extends Khandan {
 		khandanChildren.add(new KhandanPerson("Visris", "Targrin", getKhandanFather()));
 		khandanChildren.add(new KhandanPerson("Denris", "Targrin", getKhandanFather()));
 	}
-
+	
+	@Override
+	public void startWarWith(Khandan khandan) {
+		MirinGhale mGhale = (MirinGhale) ghale;
+		if(mGhale.isUseEjdehas()) {
+			// war with victory
+		}
+		else {
+			
+		}
+	}
 }

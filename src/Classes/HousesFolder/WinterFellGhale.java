@@ -8,9 +8,10 @@ import Classes.ToolsFolder.Asb;
 import Classes.ToolsFolder.GhaleSagMethods;
 import Classes.ToolsFolder.Gorg;
 import Classes.ToolsFolder.Sag;
+import Classes.ToolsFolder.WarHeyvansMethods;
 import Classes.ToolsFolder.Tools.Khandanha;
 
-public class WinterFellGhale extends Ghale implements GhaleSagMethods {
+public class WinterFellGhale extends Ghale implements GhaleSagMethods, WarHeyvansMethods {
 	
 
 	
@@ -20,19 +21,6 @@ public class WinterFellGhale extends Ghale implements GhaleSagMethods {
 	
 	public void createGorg(Gorg gorg) {
 		gorgs.add(gorg);
-	}
-	
-	/* 		Explain		*/
-	public void repairGorg() {
-		for(int i=0; i<gorgs.size(); i++)
-		{
-			if(gorgs.get(i).ghodrat < 50) {
-				if(gorgs.get(i).ghodrat >= 30)
-					gorgs.get(i).ghodrat = 50;
-				else
-					gorgs.get(i).ghodrat += 20;
-			}
-		}
 	}
 	
 	
@@ -55,6 +43,22 @@ public class WinterFellGhale extends Ghale implements GhaleSagMethods {
 		int bSags = sags.size() - number;
 		while(sags.size() > bSags)
 			sags.remove(0);
+	}
+
+	
+
+	/* 		Explain		*/
+	public void repairHeyvan() {
+		// TODO Auto-generated method stub
+		for(int i=0; i<gorgs.size(); i++)
+		{
+			if(gorgs.get(i).ghodrat < 50) {
+				if(gorgs.get(i).ghodrat >= 30)
+					gorgs.get(i).ghodrat = 50;
+				else
+					gorgs.get(i).ghodrat += 20;
+			}
+		}
 	}
 	
 
