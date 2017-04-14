@@ -1,6 +1,7 @@
 package Classes.KhandansFolder;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import Classes.HousesFolder.Ghale;
 import Classes.HousesFolder.WinterFellGhale;
@@ -15,19 +16,33 @@ public class Stark extends Khandan {
 	private final KhandanPerson amuyeKhandan;
 
 	public Stark() {
-		this(new KhandanPerson("Lord Edard", "Stark"), new KhandanPerson("Banu katlin", "Tali"),
+		this(new KhandanPerson("Lord Edard", "Stark", null), new KhandanPerson("Banu katlin", "Tali", null),
 								"Zemestan dar rah ast", "Gorg", 8000 );
 		// TODO Auto-generated constructor stub
 		setGhale(new WinterFellGhale());
-		
-		
-		
+		setChildrens();
+		ghale.increaseJamiyat(9 + ghale.getSarbazKhane().getSarbazHaNumber());
 	}
-	
+
 	private Stark(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
 		super(father, mother, shoar, nemad, ghedmat);
-		amuyeKhandan = new KhandanPerson("Benjen", "Stark");
+		amuyeKhandan = new KhandanPerson("Benjen", "Stark", null);
 	}
+	
+	@Override
+	protected void setChildrens() {
+		khandanChildren.add(new KhandanPerson("John Snow", "Stark", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Rub", "Stark", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Aria", "Stark", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Sansa", "Stark", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Riken", "Stark", getKhandanFather()));
+		khandanChildren.add(new KhandanPerson("Bern", "Stark", getKhandanFather()));
+	}
+	
+	public WinterFellGhale getGhale() {
+		return (WinterFellGhale) ghale;
+	}
+	
 
 
 	public KhandanPerson getAmuyeKhandan() {
@@ -35,7 +50,7 @@ public class Stark extends Khandan {
 	}
 
 	@Override
-	public void setGhale(Ghale ghale) {
+	protected void setGhale(Ghale ghale) {
 		// TODO Auto-generated method stub
 		this.ghale = ghale;
 	}
@@ -46,5 +61,46 @@ public class Stark extends Khandan {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	/*		Explain 	*/
+	public void createGorg() {
+		Gorg gorg = null;
+		
+		Random random = new Random();
+		
+		switch (random.nextInt(9)) {
+		case 0:
+			gorg = new Gorg(getKhandanFather());
+			break;
+		case 1:
+			gorg = new Gorg(getKhandanMother());
+			break;
+		case 2:
+			gorg = new Gorg(getAmuyeKhandan());
+			break;
+		case 3:
+			gorg = new  Gorg(khandanChildren.get(0));
+			break;
+		case 4:
+			gorg = new Gorg(khandanChildren.get(2));
+			break;
+		case 5:
+			gorg = new Gorg(khandanChildren.get(1));
+			break;
+		case 6:
+			gorg = new Gorg(khandanChildren.get(4));
+			break;
+		case 7:
+			gorg = new Gorg(khandanChildren.get(3));
+			break;
+		case 8:
+			gorg = new Gorg(khandanChildren.get(5));
+			break;
+		}
+		getGhale().createGorg(gorg);
+		
+	}
+
+	
 
 }

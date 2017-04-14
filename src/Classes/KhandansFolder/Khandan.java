@@ -5,8 +5,10 @@ import java.util.Random;
 
 import Classes.HousesFolder.Ghale;
 import Classes.HousesFolder.WinterFellGhale;
+import Classes.ToolsFolder.Kala;
 import Classes.ToolsFolder.KhandanPerson;
 import Classes.ToolsFolder.Tools;
+import Classes.ToolsFolder.Tools.NoeKala;
 
 public abstract class Khandan {
 	
@@ -17,10 +19,10 @@ public abstract class Khandan {
 	private final String nemad;
 	private final int ghedmat;
 	
-	private ArrayList<KhandanPerson> khandanChildren;
+	protected ArrayList<KhandanPerson> khandanChildren = new ArrayList<KhandanPerson>();
 	private ArrayList<Tools.Khandanha> motahedan = new ArrayList<Tools.Khandanha>();
 	
-	public Ghale ghale;
+	protected Ghale ghale;
 	
 	
 	public Khandan(KhandanPerson father, KhandanPerson mother,String shoar, String nemad, int ghedmat) {
@@ -34,8 +36,8 @@ public abstract class Khandan {
 	}
 
 
-	public abstract void setGhale(Ghale ghale);
-
+	protected abstract void setGhale(Ghale ghale);
+	protected abstract void setChildrens();
 
 	public int getGhedmat() {
 		return ghedmat;
@@ -90,21 +92,30 @@ public abstract class Khandan {
 	public abstract void reveiveSarbaz(int number);
 	
 	// فرستادن کالا
-	public void sendKala(int number, Khandan khandan) {
-		int kda = ghale.getAnbar().getTedadeKala();
+	public ArrayList<Kala> sendKala(int number, NoeKala noeKala) {
+		int kda = ghale.getAnbar().getTedadeKala(noeKala);
 		if(kda >= number) {
 			// can send Kala
-			ghale.getAnbar().removeKala(number);
-			khandan.receiveKala(number);
+			
+			ArrayList<Kala> res = new ArrayList<Kala>();
+			
+			for(int i=0; i<number; i++) {
+				res.add(ghale.getAnbar().getKala(noeKala));
+			}
+			return res;
 		}
 		else if(kda < number) {
 			// can not send kala
 		}
+		return new ArrayList<Kala>();
 	}
 	
-	public void receiveKala(int number) {
-		ghale.getAnbar().addKala(number);
+	public void receiveKala(ArrayList<Kala> kalas) {
+		for (Kala kala : kalas) {
+			ghale.getAnbar().addKala(kala);
+		}
 	}
+	
 
 	
 	// جنگ
@@ -138,8 +149,13 @@ public abstract class Khandan {
 			// shekaste Man
 			
 			// خالی کردن انبار من
-			enemy.ghale.getAnbar().addKala(this.ghale.getAnbar().getTedadeKala());
-			System.out.println(modafe + "(modafe) Shekast Khord." + this.ghale.getAnbar().getTedadeKala()+ " Kala gharat Shod.");
+
+			ArrayList<Kala> kalahayeMan = ghale.getAnbar().getAllKala();
+			for (Kala kala : kalahayeMan) {
+				enemy.ghale.getAnbar().addKala(kala);
+			}
+			
+			System.out.println(modafe + "(modafe) Shekast Khord." + this.ghale.getAnbar().getTedadeAllKala()+ " Kala gharat Shod.");
 			System.out.println(motajavez + "(motajavez) Piruz Shod.");
 			this.ghale.getAnbar().removeAllKala();
 		}
