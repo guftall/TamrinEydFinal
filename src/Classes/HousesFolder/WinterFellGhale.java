@@ -15,7 +15,6 @@ public class WinterFellGhale extends Ghale {
 	
 	private ArrayList<Gorg> gorgs = new ArrayList<Gorg>();
 	public ArrayList<Sag> sags = new ArrayList<Sag>();
-	public ArrayList<Asb> asbs = new ArrayList<Asb>();
 	
 	
 	public void createGorg(Gorg gorg) {
