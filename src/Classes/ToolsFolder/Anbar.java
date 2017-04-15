@@ -31,7 +31,7 @@ public class Anbar {
 	}
 	
 	public Kala getKala(NoeKala noeKala) {
-		kalas.remove(noeKala);
+		removeKala(noeKala);
 		return new Kala(noeKala);
 	}
 
@@ -48,6 +48,15 @@ public class Anbar {
 	public void removeKala(int number) {
 		for(int i=0; i<number; i++)
 			kalas.remove(i);
+	}
+	
+	public void removeKala(NoeKala noeKala) {
+		for(int i=0; i<kalas.size(); i++) {
+			if(kalas.get(i).getNoeKala() == noeKala) {
+				kalas.remove(i);
+				return;
+			}
+		}
 	}
 	
 	public void removeAllKala() {
