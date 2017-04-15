@@ -9,15 +9,18 @@ import Classes.ToolsFolder.Tools.NoeKala;
 
 public class KesterlyRuckGhale extends Ghale {
 
-	public ArrayList<Kala> madaneTala = new ArrayList<Kala>();
+	public int zarfiyateMadaneTala = 12000000;
 	
 	public KesterlyRuckGhale() {
 		super("kesterly Ruck", "Gharbe Vestrus", Khandanha.Lenister);
 	}
 	
 	public void bardashteTala(int number) {
-		for(int i=0; i<number; i++)
-			madaneTala.add(new Kala(NoeKala.Tala));
+		if((zarfiyateMadaneTala - number) > 0)
+		{
+			zarfiyateMadaneTala -= number;
+			getAnbar().addKala(number, NoeKala.Tala);
+		}
 	}
 	
 	public ArrayList<Kala> sellTala(Lenister lenister, int number) {
