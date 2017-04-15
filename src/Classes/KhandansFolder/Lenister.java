@@ -32,12 +32,6 @@ public class Lenister extends Khandan {
 	}
 
 	@Override
-	public void reveiveSarbaz(int number) {
-
-		
-	}
-
-	@Override
 	protected void setChildrens() {
 		// TODO Auto-generated method stub
 		khandanChildren.add(new KhandanPerson("Sersi", "Lenister", getKhandanFather()));

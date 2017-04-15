@@ -33,11 +33,6 @@ public class Batratheon extends Khandan {
 	
 	
 
-	@Override
-	public void reveiveSarbaz(int number) {
-		// TODO Auto-generated method stub
-		ghale.getSarbazKhane().addSarbaz(number);
-	}
 
 	@Override
 	protected void setChildrens() {

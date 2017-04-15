@@ -85,11 +85,12 @@ public abstract class Khandan {
 	public void sendSarbaz(int number, Khandan khandan) {
 		
 		// باید سرباز بسازد
-		for(int i=0; i<number; i++)
 			khandan.reveiveSarbaz(number);
 		
 	}
-	public abstract void reveiveSarbaz(int number);
+	public void reveiveSarbaz(int number) {
+		ghale.getSarbazKhane().addSarbaz(number);
+	}
 	
 	// فرستادن کالا
 	public ArrayList<Kala> sendKala(int number, NoeKala noeKala) {

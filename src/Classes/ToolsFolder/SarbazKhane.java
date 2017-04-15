@@ -10,7 +10,7 @@ public class SarbazKhane {
 	private ArrayList<Soldier> sarbazHa = new ArrayList<Soldier>();
 	
 	public SarbazKhane() {
-		addSarbaz();
+		//addSarbaz();
 	}
 	
 	public void addSarbaz(Vazife vazife) {
