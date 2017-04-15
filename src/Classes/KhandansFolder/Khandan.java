@@ -133,7 +133,7 @@ public abstract class Khandan {
 		
 		// اضافه کردن تعداد تصادفی سرباز به قلعه خودم برای دفاع
 		Random random = new Random();
-		ghale.getSarbazKhane().addSarbaz(random.nextInt(1500));
+		//ghale.getSarbazKhane().addSarbaz(random.nextInt(1500));
 		
 		System.out.println(modafe+ " Have "+ this.ghale.getSarbazKhane().getSarbazHaNumber()+ " Sarbaz.");
 		System.out.println(motajavez+ " Have "+ enemy.ghale.getSarbazKhane().getSarbazHaNumber()+ " Sarbaz.\n");

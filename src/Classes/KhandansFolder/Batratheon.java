@@ -4,9 +4,11 @@ import Classes.HousesFolder.Ghale;
 import Classes.HousesFolder.StormAndGhale;
 import Classes.ToolsFolder.KhandanPerson;
 import Classes.ToolsFolder.Tools;
+import Classes.ToolsFolder.Tools.Khandanha;
 
 public class Batratheon extends Khandan {
 	
+	/*		Explain		*/
 	public Batratheon() {
 		this(new KhandanPerson("Robert", "Baratheon", null),
 			new KhandanPerson("Sersi", "Lenister",new KhandanPerson("Lord TauYen", "Lenister", null)),
@@ -18,7 +20,7 @@ public class Batratheon extends Khandan {
 
 	public Batratheon(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
 		super(father, mother, shoar, nemad, ghedmat);
-
+		addMotahed(Khandanha.Stark);
 	}
 	
 	public StormAndGhale getGhale() {

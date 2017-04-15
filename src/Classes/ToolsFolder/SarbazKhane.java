@@ -69,6 +69,24 @@ public class SarbazKhane {
 		}
 	}
 	
+	public void removeSarbazValriyaiNaDar(int number) {
+		if(number < sarbazHa.size()) {
+			for(int i=0; i<number; i++) {
+				removeSVNadar();
+			}
+		}
+	}
+	
+	private void removeSVNadar() {
+		for(int i=0; i<sarbazHa.size(); i++) {
+			if(!sarbazHa.get(i).haveShamshirValriyai)
+			{
+				sarbazHa.remove(i);
+				return;
+			}
+		}
+	}
+	
 	
 	/*		Explain		*/
 	public void removeSarbaz(int number, Vazife vazife) {

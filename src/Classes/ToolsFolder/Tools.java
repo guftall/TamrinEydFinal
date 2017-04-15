@@ -22,7 +22,7 @@ public class Tools {
 			deadWWalkers += j;
 		}
 		System.out.println("\nWhiteWalkers have "+ whiteWalkers.getWhiteWalkersNumber()+ " whiteWalker.");
-		
+		System.out.println("And "+ whiteWalkers.getAnkabutsNumber()+ " Ankabut");
 		
 		
 		String deadWWalkersRes =  whiteWalkers.removeWhiteWalker(deadWWalkers);
@@ -120,12 +120,23 @@ public class Tools {
 			for(int i=0; i<khandans.length; i++) {
 				
 				int khandanSarbazValriyaiha = khandans[i].getGhale().getSarbazKhane().getSarbazHayeValriyaiDarNumber();
-				khandans[i].getGhale().getSarbazKhane().removeSarbaz(khandanSarbazValriyaiha / 2);
-				whiteWalkers.addWhiteWalker(khandanSarbazValriyaiha / 2);
-				changedSarbazs += khandanSarbazValriyaiha / 2;
+				int changedSarbazsofthisKhandan =( khandans[i].getGhale().getSarbazKhane().getSarbazHaNumber() - khandanSarbazValriyaiha) / 2 ;
+				khandans[i].getGhale().getSarbazKhane().removeSarbazValriyaiNaDar(changedSarbazsofthisKhandan);
+				whiteWalkers.addWhiteWalker(changedSarbazsofthisKhandan);
+				changedSarbazs += changedSarbazsofthisKhandan;
 			}
 			
-			System.out.println(changedSarbazs + " Soldier Changed to WhiteWalker");
+			System.out.println(changedSarbazs + " Soldier Changed to WhiteWalker\n\n");
+			
+			
+			
+
+			for(int i=0; i<khandans.length; i++) {
+				System.out.println(khandans[i]+ " Have "+ khandans[i].getGhale().getSarbazKhane().getSarbazHaNumber()+ " Soldier" );
+				
+			}
+			
+			
 			
 		}
 		else {
@@ -256,7 +267,11 @@ public class Tools {
 		Stark,
 		Lenister,
 		Batratheon,
-		Targrin
+		Targrin,
+		Arian,
+		Tali,
+		Feri,
+		Tirel
 	}
 	
 	public enum Vazife{

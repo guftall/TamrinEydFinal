@@ -27,6 +27,8 @@ public class Stark extends Khandan {
 	private Stark(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
 		super(father, mother, shoar, nemad, ghedmat);
 		amuyeKhandan = new KhandanPerson("Benjen", "Stark", null);
+		addMotahed(Khandanha.Arian);
+		addMotahed(Khandanha.Tali);
 	}
 	
 	@Override

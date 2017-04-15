@@ -5,6 +5,7 @@ import Classes.HousesFolder.KesterlyRuckGhale;
 import Classes.HousesFolder.WinterFellGhale;
 import Classes.ToolsFolder.KhandanPerson;
 import Classes.ToolsFolder.Tools;
+import Classes.ToolsFolder.Tools.Khandanha;
 
 public class Lenister extends Khandan {
 	
@@ -18,7 +19,8 @@ public class Lenister extends Khandan {
 
 	private Lenister(KhandanPerson father, KhandanPerson mother, String shoar, String nemad, int ghedmat) {
 		super(father, mother, shoar, nemad, ghedmat);
-
+		addMotahed(Khandanha.Feri);
+		addMotahed(Khandanha.Tirel);
 	}
 	
 	public KesterlyRuckGhale getGhale() {
