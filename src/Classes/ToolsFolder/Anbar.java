@@ -14,7 +14,7 @@ public class Anbar {
 		
 		Random random = new Random();
 		
-		addKala(random.nextInt(2300), NoeKala.Gandom);
+		//addKala(random.nextInt(2300), NoeKala.Gandom);
 	}
 
  	public int getTedadeAllKala() {
